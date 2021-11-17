@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hide{
+  visibility: hidden;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background-image: linear-gradient(
+    45deg, #2c305a, black);
+}
+i{
+  cursor: pointer;
+}
+.cotianer {
+  width: 360px;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(
+    45deg, #2c305a, black);
+  color: rgb(95, 97, 99);
+  border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+
+}
+.choice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+h2{color: aliceblue;}
+.choice div{
+  height: 40px;
+  width: 80px;
+      margin: 5px;
+      padding-top: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 12px;
+      text-align: center;
+}
+.choice div:hover{color: aliceblue;}
+.cotianer .fa-cog{
+  margin-top: 60px;
+cursor: pointer;
+font-size: 25px;}
+.cotianer .fa-cog:hover{color: rgb(252 113 110);}
+.outside{
+  width: 290px;
+  height: 290px;
+  background-image: linear-gradient(
+    45deg, #2c305a, black);
+  border-radius: 100%;
+  display: grid;
+place-items: center;
+align-items: center;
+
+}
+.inner{
+  width: 260px;
+  height: 260px;
+  background-image: linear-gradient(
+    70deg, #2c305a, black);
+  border-radius: 100%;
+  display: grid;
+place-items: center;
+align-items: center;
+}
+.thing{
+  height: 250px;
+  width: 250px;
+  background: rgb(255, 255, 255);
+  border-radius: 100%;
+   position: relative;
+  
+   
+
+}
+.thing .r{
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  clip: rect(0px, 125px, 250px, 0px);
+  background: rgb(252 113 110);
+ 
+  
+
+}
+.thing .minicicle{
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  clip: rect(0px, 125px, 250px, 0px);
+  background: white;
+
+}
+.cicle{
+  width: 235px;
+  height: 235px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(
+    45deg, rgb(30 33 64), rgb(3, 3, 3));
+    text-align: center;
+    cursor: pointer;
+  position: absolute;
+  z-index: 9;
+  border-radius: 100%;
+  font-size: 55px;
+  padding-top: 50px;
+  color: aliceblue;
+}
+.cicle span{
+  font-size: 15px;
+}
+.cicle span:hover{ font-size: 16px;}
+.pause{
+  animation-play-state: paused;
+}
+.thing .l{
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  clip: rect(0px, 125px, 250px, 0px);
+  background: rgb(252 113 110);
+
+}
+.right{ animation-name: right;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+ }
+.left{animation-name: left;
+  animation-timing-function: linear;
+  animation-fill-mode: both;}
+@keyframes left {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+   
+    transform: rotate(180deg);
+
+  }
+  100%{transform: rotate(360deg);
+    z-index: 6;}
+}
+
+
+@keyframes right {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg);
+  }
+}
+
+/* start setting style */
+.setting{
+  width: 350px;
+  height: 360px;
+  background-color: rgb(255 255 255);
+  position: absolute;
+  z-index: 10;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+
+
+  
+}
+.setting .set{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+height: 40px;}
+.setting .set h3{
+  margin-left: 10px;
+}
+.setting .set span{
+  font-size: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+.setting .set span:hover{
+  transform: rotate(-90deg);
+  color: red;
+}
+.setting .minutes h5{
+ margin-left: 11px;
+ text-transform: uppercase;
+ margin-top: 10px;
+
+}
+.icon{   
+   display: flex;
+  flex-direction: column;
+  color: #a7978f;}
+.fa-angle-up{
+  padding-top: 5px;
+}
+.fa-angle-down{
+  padding-bottom: 5px;
+}
+.choiceMin{
+  display: flex;
+  justify-content: space-evenly;
+}
+.pomodoro{
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: rgb(238 240 250);
+  padding: 10px 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+ 
+}
+
+.choiceMin>div{
+  font-size: 10px;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+.break{
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  background-color: gainsboro;
+}
+.choiceFont{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  padding-left: 10px;
+}
+.choiceFont:first-child{
+  width: 80px;
+  margin-left: 5px;
+}
+.choiceFont .font{
+  width: 100px;
+  display: flex;
+}
+.choiceFont .font div{
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background-color: rgb(238 240 250);
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+.black{
+  color: rgb(246 112 113);
+}
+.one{font-family: 'Poppins', sans-serif;}
+.tow{font-family: ui-monospace;padding-top: 4px;}
+.three{font-family: cursive;}
+.choiceColor{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  padding-left: 10px;
+}
+.choiceColor .color{
+  width: 100px;
+  display: flex;
+}
+.choiceColor .color div{
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+cursor: pointer;
+  margin-right: 10px;
+  text-align: center;
+}
+.red{background-color: rgb(246 112 113);}
+.green{background-color: rgb(112 242 245);}
+.blue{background-color: rgb(214 130 244);}
+button {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  background: #f67071;
+  color: aliceblue;
+  cursor: pointer;
+
+}
+button:hover{
+  background-color:rgb(24 26 49);
+ 
+  font-family: 'Courier New', Courier, monospace;
+}
